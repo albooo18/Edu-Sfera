@@ -1,0 +1,48 @@
+button {
+  position: relative;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 50px 15px;
+  font-size: 15px;
+  font-weight: bold;
+  font-stretch: extra-expanded;
+  letter-spacing: 2px;
+  outline: none;
+  border: 2px solid $darkerMain;
+  z-index: 1;
+  color: white;
+  background-color: $main;
+
+  &:hover::before {
+    opacity: 1;
+    transition: .2s ease;
+    width: 100%;
+    height: 100%;
+    border-color: $lightblack;
+  }
+
+  &:hover {
+    border-color: $lightblack;
+    color: rgb(219, 219, 219);
+    transition: .3s ease;
+  }
+
+  &::before {
+    color: white;
+    margin-top: -2px;
+    position: absolute;
+    display: block;
+    content: '';
+    width: 70%;
+    height: 95%;
+    font-size: 15px;
+    z-index: -1;
+    background: transparent;
+    background-color: $lightblack;
+    backdrop-filter: transparent;
+    opacity: 0;
+    transition: .2s ease;
+  }
+}
